@@ -1,6 +1,7 @@
 # RPC failure "Network connection lost" with cloudflare python worker
 
 ## Running worker1
+```
 $ cd w1/
 $ npx wrangler dev
 npm warn Unknown user config "always-auth". This will stop working in the next major version of npm.
@@ -12,8 +13,10 @@ npm warn Unknown user config "always-auth". This will stop working in the next m
 ╰──────────────────────────────────────────────────────────────────────╯
 ⎔ Starting local server...
 [wrangler:info] Ready on http://localhost:8788
+```
 
 ## Running worker2
+```
 $ cd w2/
 $ npx wrangler dev
 npm warn Unknown user config "always-auth". This will stop working in the next major version of npm.
@@ -37,8 +40,10 @@ Binding               Resource      Mode
 env.W1 (worker1)      Worker        local [connected]
 
 [wrangler:info] Ready on http://localhost:8789
+```
 
 ## After visiting w2 at `http://localhost:8789` we get the following error
+```
 [mf:error] Error: read ECONNRESET
     at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
 ✘ [ERROR] Uncaught PythonError: Traceback (most recent call last):
@@ -94,3 +99,4 @@ env.W1 (worker1)      Worker        local [connected]
 
 
 [wrangler:info] GET / 500 Internal Server Error (73ms)
+```
