@@ -1,0 +1,4 @@
+name = "worker1"
+main = "entry.py"
+compatibility_date = "2026-02-17"
+compatibility_flags = ["python_workers"]
